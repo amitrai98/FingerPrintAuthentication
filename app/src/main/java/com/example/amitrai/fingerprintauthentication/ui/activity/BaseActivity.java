@@ -135,12 +135,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() == 1){
-            super.onBackPressed();
+        if (getSupportFragmentManager().getBackStackEntryCount() == 1){
+            finish();
         }else
-            getFragmentManager().popBackStack();
-
-
-
+            getSupportFragmentManager().popBackStack();
     }
 }
